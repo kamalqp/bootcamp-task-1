@@ -1,0 +1,166 @@
+/** reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/** root variable */
+
+:root {
+  --color-primary: #229f95;
+  --color-secondary-dark: #234894;
+  --color-secondary-light: #afcfdd;
+  --coler-text: #a1a1a1;
+  --color-white: #fff;
+}
+
+/** HTML and general css */
+
+html {
+  font-size: 62.5%;
+  padding: 3rem;
+}
+
+.request__date,
+.request__id-text,
+.request__id-number,
+.request_user-name {
+  color: var(--coler-text);
+  font-weight: 500;
+}
+
+/** header */
+
+.header-text {
+  padding-bottom: 5rem;
+  font-size: 2rem;
+}
+
+
+/** page */
+
+.requests {
+  height: 100%;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.request {
+  padding-bottom: 3rem;
+}
+
+.request__header {
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request__number {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}
+
+.request__type {
+  padding-right: 0.5rem;
+  font-weight: 500;
+  color: var(--color-secondary-dark);
+}
+
+.request__id-number {
+  padding-bottom: 2rem;
+}
+
+.request__request-details {
+  padding-bottom: 1rem;
+}
+
+.request__footer {
+  display: flex;
+  justify-content: space-between;
+}
+.request-footer__user-details {
+  display: flex;
+  align-items: center;
+}
+.request__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.request__titel {
+  padding-bottom: 0.3rem;
+  font-weight: 900;
+}
+
+.request_user-name {
+  padding-right: 0.5rem;
+}
+
+.request__button {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+/*! Screen 600 */
+
+@media screen and (min-width: 600px) {
+  .request__date,
+  .request__id-text,
+  .request__id-number,
+  .request_user-name {
+    font-weight: 600;
+  }
+
+  .requests {
+    width: 90vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .request__button {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
+
+
+/*! Screen 1024 */
+
+@media screen and (min-width: 1024px) {
+  .request__date,
+  .request__id-text,
+  .request__id-number,
+  .request_user-name {
+    color: var(--coler-text);
+    font-weight: 600;
+  }
+
+  .requests {
+    width: 95vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .request__button {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
